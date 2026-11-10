@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Campus Choices • UNIV 101</title><style>:root{--bg:#101b29;--panel:#192738;--line:#354457;--gold:#ffd16b;--ink:#f4f2eb;--muted:#afbdcc;--teal:#81d6c3}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}button,input,select{font:inherit}button{cursor:pointer;color:inherit;background:#233448;border:1px solid var(--line);border-radius:8px;padding:9px 15px;transition:background .15s,transform .15s}button:hover:enabled{background:#34485f}button:active:enabled{transform:translateY(1px)}button:disabled{opacity:.4;cursor:default}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--teal);outline-offset:4px}header{display:flex;align-items:center;justify-content:space-between;padding:24px 4%;border-bottom:1px solid var(--line);gap:20px}.brand{display:flex;align-items:center;gap:16px}.brand-mark{font-size:30px;font-weight:900;border:1px solid var(--gold);border-radius:50%;width:56px;height:56px;display:grid;place-content:center;position:relative;color:var(--gold)}.brand-mark span{position:absolute;right:5px;bottom:-6px;font-size:25px}h1{font-size:22px;letter-spacing:-.6px;margin:0}h1 span{font-weight:400;color:var(--muted);margin-left:8px}.eyebrow{font-size:11px;font-weight:750;letter-spacing:2px;color:var(--gold);margin:0 0 7px}.tools{display:flex;gap:8px}.tools button{background:transparent;font-size:13px}main{max-width:1600px;margin:auto;padding:34px 4% 20px}.intro{display:flex;align-items:center;justify-content:space-between;gap:30px;margin-bottom:28px}h2{font-size:clamp(25px,2.5vw,36px);line-height:1.18;letter-spacing:-1px;margin:0 0 12px}.intro p:not(.eyebrow){margin:0;color:var(--muted)}.progress{min-width:170px;display:flex;flex-direction:column}.progress strong{font-size:29px;font-variant-numeric:tabular-nums}.progress span{font-size:10px;letter-spacing:1.6px;color:var(--muted)}.track{height:4px;background:#304052;margin-top:10px}.track div{height:100%;background:var(--teal);width:0;transition:width .3s}.teams{display:grid;grid-template-columns:repeat(var(--team-count,3),minmax(0,1fr));gap:12px;margin-bottom:27px}.team{border:1px solid var(--line);border-left:3px solid var(--team-color);padding:13px 18px;background:var(--panel);display:flex;align-items:center;justify-content:space-between;gap:10px;border-radius:5px}.team-name{font-size:14px;overflow-wrap:anywhere}.score{font-size:27px;font-weight:750;font-variant-numeric:tabular-nums;white-space:nowrap}.board-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:13px}.board-top p{font-size:10px;letter-spacing:1.6px}.muted{color:var(--muted);margin-left:10px}.live-dot{display:inline-block;width:6px;height:6px;background:var(--teal);border-radius:50%;margin-right:6px}.board-top button{font-size:12px;background:transparent;padding:6px 10px}.board{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}.category{display:grid;grid-template-rows:70px repeat(5,minmax(67px,8.5vh));gap:10px}.category h3{font-size:clamp(13px,1.3vw,18px);line-height:1.2;text-align:center;padding:10px 7px;margin:0;display:grid;place-content:center;color:var(--ink);border-top:2px solid var(--gold);border-bottom:1px solid var(--line)}.tile{font-size:clamp(25px,3vw,43px);font-weight:750;letter-spacing:-1px;color:var(--gold);background:linear-gradient(145deg,#24374c,#1c2d40);border-color:#3a5067;border-radius:6px}.tile:hover:enabled{background:#35516b;transform:translateY(-2px);border-color:var(--gold)}.tile:disabled{color:#6e8898;background:#172431;opacity:1;border:1px dashed #304154;font-size:25px}footer{display:flex;justify-content:space-between;gap:20px;font-size:11px;color:var(--muted);margin-top:25px}.results{margin-top:25px;padding:25px;border:1px solid var(--teal);background:var(--panel);border-radius:10px}.results p:last-child{margin-bottom:0}dialog{color:var(--ink);background:var(--panel);border:1px solid #526478;border-radius:16px;padding:32px;max-width:620px;width:calc(100% - 32px);max-height:90vh;box-shadow:0 35px 120px #0009}dialog::backdrop{background:#060f1bda;backdrop-filter:blur(7px)}dialog h2{font-size:30px}dialog p,dialog li{color:var(--muted)}dialog li{margin-bottom:12px}label{display:flex;justify-content:space-between;align-items:center;gap:15px;margin:14px 0;font-size:14px}input,select{background:#101b29;border:1px solid #526478;color:var(--ink);border-radius:6px;padding:8px;min-width:0}input[type=text]{width:62%}.checkbox{justify-content:flex-start}.checkbox input{accent-color:var(--gold);width:18px;height:18px}.small{font-size:12px;line-height:1.6}.actions{display:flex;justify-content:flex-end;gap:10px;margin-top:25px}.primary{background:var(--gold);color:#17202b;border-color:var(--gold);font-weight:750}.primary:hover:enabled{background:#ffe1a0}.clue-dialog{max-width:1000px;padding:38px 45px}.clue-top{display:flex;justify-content:space-between;align-items:center;gap:20px}.value{color:var(--gold);font-size:26px;font-weight:700}.clue-text{font-size:clamp(24px,3.2vw,40px);line-height:1.4;color:var(--ink);margin:25px 0 28px;letter-spacing:-.5px}.timer-row{display:flex;align-items:center;gap:15px;margin-bottom:24px}.timer-row button{font-size:13px}#timerDisplay{font-size:24px;color:var(--teal);font-variant-numeric:tabular-nums}#timerMessage{font-size:13px;color:var(--gold)}.reveal{width:100%;padding:14px}kbd{font:10px system-ui;border:1px solid #9c7938;border-radius:4px;padding:3px 6px;margin-left:10px}#answerPanel{border-top:1px solid var(--line);padding-top:24px}#answerPanel h3{font-size:25px;margin:10px 0;color:var(--teal);font-weight:650}#answerPanel p{margin:8px 0}.source{font-size:12px}.judging{display:flex;flex-direction:column;gap:8px;margin-top:20px}.judge-row{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid var(--line);padding-top:8px}.judge-row>span{overflow-wrap:anywhere}.judge-row div{display:flex;gap:7px;flex-shrink:0}.judge-row button{font-size:13px}.clue-actions{border-top:1px solid var(--line);padding-top:20px;justify-content:space-between}[hidden]{display:none!important}@media(max-width:800px){header{align-items:flex-start;flex-direction:column;padding:18px 4%}h1 span{display:block;margin-left:0}.tools{flex-wrap:wrap}.intro{align-items:flex-start}.progress{min-width:110px}.teams{grid-template-columns:repeat(2,minmax(0,1fr))}.team{padding:10px}.score{font-size:22px}.board{overflow:auto;grid-template-columns:repeat(6,minmax(130px,1fr));padding-bottom:10px}.category{grid-template-rows:65px repeat(5,75px)}footer{flex-direction:column;gap:5px}.muted{display:none}.clue-dialog{padding:24px}.judge-row{flex-wrap:wrap}.clue-actions{gap:10px;flex-wrap:wrap}.intro h2{font-size:25px}.intro p:not(.eyebrow){font-size:13px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+/* Teaching missions: introduce, apply, reflect. */
+.steps{display:flex;gap:8px;margin:16px 0 25px}.steps span{flex:1;border-top:3px solid var(--line);padding-top:9px;color:var(--muted);font-size:12px;letter-spacing:.5px}.steps .current{border-color:var(--teal);color:var(--teal);font-weight:750}#missionTitle{font-size:clamp(26px,3vw,36px);margin-bottom:25px}.lesson-text{font-size:clamp(20px,2.2vw,27px);line-height:1.65;color:var(--ink);margin:12px 0 22px}#learnPanel{background:#122131;border:1px solid var(--line);border-radius:10px;padding:25px}#learnPanel .reveal{margin-top:15px}.clue-text{font-size:clamp(22px,2.4vw,30px);margin:10px 0 18px}.choices{display:grid;gap:10px;margin:16px 0 22px}.choice{text-align:left;padding:15px 18px;line-height:1.5;font-size:16px}.choice[aria-pressed=true]{border:2px solid var(--teal);background:#24463f;padding:14px 17px}.feedback{display:grid;gap:12px;margin:22px 0}.feedback-item{border-left:3px solid #5b6a7d;background:#122131;padding:14px 18px;border-radius:0 6px 6px 0}.feedback-item.best{border-color:var(--teal);background:#173631}.feedback-item strong{font-size:15px;font-weight:650}.feedback-item p{font-size:14px}.takeaway,.discussion{padding:18px 20px;background:#29364a;border-radius:8px;margin-top:14px}.discussion{background:#333529}.takeaway p:last-child,.discussion p:last-child{font-size:18px;color:var(--ink)}.references{margin-top:20px;font-size:12px;color:var(--muted)}.references summary{cursor:pointer}.references a{color:var(--teal)}.references p{margin:8px 0}.clue-dialog{max-width:1050px}#answerText:focus{outline:none}#choiceResult{font-size:13px;color:var(--gold)}@media(max-width:650px){#learnPanel{padding:18px}.clue-dialog{padding:22px}.lesson-text{font-size:20px}.steps span{font-size:11px}}
+.toolkit{border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:18px 22px;margin-top:24px}.toolkit summary{cursor:pointer;font-weight:650}.toolkit summary span{color:var(--teal);font-size:12px;font-weight:400;margin-left:12px}.toolkit-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}.toolkit-cards article{padding:16px;background:#102131;border-left:2px solid var(--teal);border-radius:4px}.toolkit-cards h3{font-size:15px;margin:0 0 7px}.toolkit-cards p{font-size:14px;color:var(--muted);margin:0}
+.method-explorer{margin:20px 0}.method-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px}.method-cards details{border:1px solid var(--line);border-radius:7px;padding:12px;background:var(--panel)}.method-cards summary{cursor:pointer;color:var(--teal);font-size:15px;font-weight:650}.method-cards p{font-size:14px;line-height:1.6;margin:10px 0 0}
+</style></head>
+<body>
+<header><div class="brand"><span class="brand-mark" aria-hidden="true">W<span>•</span></span><div><p class="eyebrow">UNIV 101 / AY 26–27</p><h1>Campus Choices <span>Learn through play</span></h1></div></div><div class="tools"><button id="help">How to play</button><button id="fullscreen">Full screen</button><button id="newGame">New game</button></div></header>
+<main><section class="intro"><div><p class="eyebrow">LEARN IT. TALK IT THROUGH. TRY IT OUT.</p><h2>Your next move starts here.</h2><p>Learn a new idea, tackle a campus scenario, and talk through the choice. No slides needed.</p></div><div class="progress"><strong id="progress">0 / 30</strong><span>MISSIONS COMPLETED</span><div class="track"><div id="progressBar"></div></div></div></section>
+<section id="teams" class="teams" aria-label="Team scores"></section>
+<div class="board-top"><p><span class="live-dot"></span> CLASSROOM BOARD <span class="muted">/ 100–500 POINTS</span></p><button id="undo" disabled>↶ Undo last mission</button></div>
+<section id="board" class="board" aria-label="Learning categories and missions"></section>
+<section id="results" class="results" hidden><p class="eyebrow">BOARD COMPLETE</p><h2 id="winner"></h2><p>Close with a discussion: what is one idea from today you could put into practice?</p></section>
+<details id="toolkit" class="toolkit"><summary>Your class toolkit <span id="toolkitCount">0 ideas collected</span></summary><p class="small">Practical takeaways stay here after you explore a mission’s outcome. Use them to close the session or revisit an idea.</p><div id="toolkitCards" class="toolkit-cards"></div></details>
+<footer><span>UNIV 101 • Well-being, relationships &amp; sexual health</span><span id="saveStatus">Offline classroom edition</span></footer>
+</main>
+<dialog id="setup"><form id="setupForm"><p class="eyebrow">LET’S PLAY</p><h2>Bring your teams together.</h2><p>No prior presentation needed. Each tile introduces an idea, then lets teams put it into practice.</p><label>Number of teams <select id="teamCount"><option>2</option><option selected>3</option><option>4</option><option>5</option><option>6</option></select></label><div id="nameFields"></div><label>Discussion timer <select id="timerSetting"><option value="0" selected>No timer</option><option value="15">15 seconds</option><option value="30">30 seconds</option><option value="60">60 seconds</option></select></label><label class="checkbox"><input id="penalties" type="checkbox"> Subtract points for incorrect responses</label><p class="small">Use fictional scenarios, never personal disclosures. Teams may pass. Award points for a choice and the reasoning behind it.</p><div class="actions"><button type="button" id="cancelSetup">Cancel</button><button class="primary" type="submit">Start game →</button></div></form></dialog>
+<dialog id="clueDialog" class="clue-dialog" aria-labelledby="missionTitle">
+<div class="clue-top"><p id="clueCategory" class="eyebrow"></p><span id="clueValue" class="value"></span></div>
+<nav class="steps" aria-label="Mission progress"><span id="stepLearn">1 · Learn</span><span id="stepDecide">2 · Decide</span><span id="stepDiscuss">3 · Discuss</span></nav>
+<h2 id="missionTitle"></h2>
+<section id="learnPanel"><p class="eyebrow">YOUR FIELD GUIDE</p><p id="lessonText" class="lesson-text"></p><div id="methodExplorer" class="method-explorer" hidden><p class="eyebrow">EXPLORE THE OPTIONS · TAP TO OPEN</p><div id="methodCards" class="method-cards"></div></div><p class="small">Read this together. Everything you need to begin is introduced here.</p><button id="startChallenge" class="primary reveal">Take the challenge →</button></section>
+<section id="challengePanel" hidden><p class="eyebrow">WHAT’S THE BEST NEXT MOVE?</p><p id="clueText" class="clue-text"></p><p class="small">Teams discuss A, B, or C and explain why. The host can mark a shared choice below.</p><div id="choices" class="choices" role="group" aria-label="Scenario choices"></div>
+<div class="timer-row"><button id="timerButton">Start timer</button><output id="timerDisplay" aria-label="Time remaining"></output><span id="timerMessage" role="status"></span></div>
+<button id="reveal" class="primary reveal">Explore the outcome →</button></section>
+<section id="answerPanel" hidden><p class="eyebrow">THE BEST NEXT MOVE</p><h3 id="answerText"></h3><p id="choiceResult" role="status"></p><div id="feedback" class="feedback"></div><div class="takeaway"><p class="eyebrow">TAKE THIS WITH YOU</p><p id="teachingNote"></p></div><div class="discussion"><p class="eyebrow">TRY IT TOGETHER</p><p id="discussionPrompt"></p></div><details class="references"><summary>Facilitator sources &amp; further reading</summary><p id="source" class="source"></p><div id="referenceLinks"></div><p class="small">All teaching content is included offline. Optional reference links need internet access.</p></details><div id="judging" class="judging"></div><p class="small">Host awards points for a sound choice and explanation. Equivalent reasoning counts. One correct award per mission; each team can receive one incorrect ruling.</p></section>
+<div class="actions clue-actions"><button id="back">Back without playing</button><button id="finish" class="primary">Skip mission →</button></div></dialog>
+<dialog id="helpDialog"><p class="eyebrow">FACILITATOR GUIDE</p><h2>The game is the lesson.</h2><p>Students do not need to see a presentation first. Every mission introduces its own concept.</p><ol><li><strong>Learn:</strong> Pick any tile and read its short field guide aloud. Invite a different student to read each time.</li><li><strong>Decide:</strong> Open the scenario. Let teams discuss A, B, or C and prepare a reason. Use the optional timer only after reading. Higher points are higher stakes; any tile can be played first.</li><li><strong>Discuss:</strong> Explore the outcome. Read why each choice works or falls short, then use “Try it together” to practice the skill. Award points for a choice and reasoning, not for memorizing vocabulary.</li><li><strong>Continue:</strong> Finish the mission to retire the tile. Undo restores its tile and previous scores. Play a selection of missions or the whole board.</li></ol><p>For a first session, allow about 2–3 minutes per mission and adjust to discussion. Choose missions across categories; ten address relationships and sexual health.</p><p>All situations are fictional. Anyone may pass or observe, and no one should disclose personal health or relationship experiences. Keep the conversation respectful and inclusive of people who are not sexually active.</p><p class="small">Facilitator references appear after each outcome. The supplied UNIV 101 material is the primary source, with linked health clarifications from CDC and current service information where checked. No diagnosis or personal medical plan is part of play.</p><button id="closeHelp" class="primary">Let’s play</button></dialog>
+<dialog id="resetDialog"><h2>Start a fresh board?</h2><p>This clears the current scores and completed clues on this browser.</p><div class="actions"><button id="cancelReset">Keep playing</button><button id="confirmReset" class="primary">Set up new game</button></div></dialog>
+<script>// Each mission teaches a concept before students use it. Edit this file, then rebuild.
+// mission(title, lesson, scenario, options [text, explanation], correct index,
+//         takeaway, discussion, source slides, optional verified reference links)
+function mission(title, lesson, scenario, options, correct, takeaway, discussion, slides, links=[]) {
+ return {title,lesson,scenario,options,correct,takeaway,discussion,slides,links};
+}
+const CDC=['CDC: contraception and STI protection','https://www.cdc.gov/contraception/about/'];
+const RIH=['UMBC: appointments and services','https://health.umbc.edu/health-services/appointments/'];
+window.QUIZ = [
+{title:'The whole you', short:'WELL-BEING', clues:[
+mission('More than not being sick',
+ 'Health includes physical, mental, and social well-being. Well-being also includes meaning, purpose, and the conditions in which we live. A person can have no obvious illness and still need connection or support.',
+ 'Jordan says, “I’m not sick, so my health is fine,” but feels isolated and has stopped doing things they enjoy. Which response sees the whole picture?',
+ [['“No illness means there is nothing to work on.”','Absence of illness does not tell us about connection, emotions, or quality of life.'],['“Connection and how you’re feeling matter too. What support would feel useful?”','This recognizes social and mental well-being without diagnosing Jordan.'],['“Just exercise more; that covers every part of health.”','Movement can help, but one habit does not address every dimension of well-being.']],1,
+ 'Look beyond illness: ask about functioning, connection, and meaning.', 'Name one way a campus could make it easier for students to feel connected.', '3–5'),
+mission('Action and experience',
+ 'Wellness is the active pursuit of choices and habits that support health. Well-being is the broader experience of how life is going. Habits matter, and so do social, financial, and environmental conditions.',
+ 'A student takes walks but is worried about rent and feels disconnected. Which plan addresses both wellness and well-being?',
+ [['Keep the walks and explore financial support and a manageable way to connect.','This combines a helpful habit with support for the conditions affecting life.'],['Buy a wellness product and assume the problem is solved.','A product does not automatically address housing pressure or isolation.'],['Give up the walks because they did not solve everything.','A habit can still help even when additional support is needed.']],0,
+ 'A healthy habit is one tool. Access to support and a sense of belonging matter too.', 'Give one example of a helpful habit and one example of a helpful campus condition.', '3–4, 16'),
+mission('Capacity is part of the plan',
+ 'Mental health supports learning, working, managing emotions, and maintaining relationships. Planning around actual capacity—and asking for help—can support these functions. Being busy is not the same as doing well.',
+ 'A classmate is balancing classes, work, and leadership roles and is missing assignments. What is the strongest first plan?',
+ [['Add another activity to prove they can handle pressure.','More demands may deepen the mismatch between time and capacity.'],['Hide the missed work until the semester ends.','Waiting removes chances to discuss adjustments or support.'],['Review commitments and talk with an advisor or professor about a realistic plan.','This addresses workload and connects the student with people who can help.']],2,
+ 'Make room for both commitments and recovery; communicate before overload grows.', 'What is one commitment a hypothetical student could reduce, postpone, or ask for help with?', '5, 11'),
+mission('A prescription is personal',
+ 'Prescription medicines should be used as directed by the person’s healthcare provider. Sharing a prescription can be dangerous: a drug and dose chosen for one person may be inappropriate for someone else.',
+ 'A friend offers someone else’s prescription medication for an all-night study session. What is the best next move?',
+ [['Try half because a smaller amount must be safe.','A smaller amount does not make an unprescribed medicine appropriate or safe.'],['Decline and use an academic plan, rest, or professional support instead.','This avoids taking someone else’s medication and addresses the study problem.'],['Take it if the friend has used it before.','Another person’s experience cannot establish safety for someone else.']],1,
+ 'Do not share prescription medication or take medication prescribed to another person.', 'Offer a one-sentence refusal that keeps the conversation respectful.', '32'),
+mission('Change the environment, too',
+ 'Well-being is shaped by social, economic, and environmental conditions as well as individual choices. Money pressure, food access, sleep conditions, and belonging can interact. Supporting someone means taking those constraints seriously.',
+ 'A student skips meals to pay bills and cannot concentrate. Which response addresses the underlying problem?',
+ [['Connect them with financial and food-support pathways, while helping make a realistic daily plan.','This responds to material needs rather than treating the situation as a motivation problem.'],['Tell them to use more willpower.','Willpower does not create money or access to food.'],['Recommend a costly wellness routine without asking about access.','Advice that ignores resources can be impossible to use.']],0,
+ 'Ask what makes a healthy choice possible—not only what the choice should be.', 'What question could you ask to understand a barrier without making assumptions?', '3, 16, 26')
+]},
+{title:'Stress & reset',short:'STRESS',clues:[
+mission('Challenge or overload?',
+ 'Eustress is a challenging but manageable stress response that can support focus, motivation, and growth. Distress occurs when demands feel overwhelming and drain coping capacity. The same event can feel different to different people.',
+ 'Before a presentation, Lee feels energized, has practiced, and believes the challenge is manageable. Which description fits best?',
+ [['All stress is harmful and must disappear.','Some stress can support performance when the challenge feels manageable.'],['This is automatically a diagnosis of anxiety.','A brief scenario cannot establish a diagnosis.'],['This sounds like eustress: a manageable challenge supporting focus.','The key clues are energy, preparation, and perceived ability to cope.']],2,
+ 'Ask whether the challenge feels manageable and how it affects functioning.', 'How could the same presentation become overwhelming for another student?', '6–10'),
+mission('Spot the overload',
+ 'Distress can interfere with concentration, sleep, motivation, and clear thinking. Persistent or intense stress can drain a person’s ability to function. A cluster of changes is a reason to check in and consider support, not to label someone.',
+ 'A student has been overwhelmed for weeks, sleeping poorly, and struggling to begin work. What is a helpful response?',
+ [['“You just need to work harder.”','That ignores the reported changes and may add pressure.'],['Check in, discuss reducing demands, and offer to help them connect with counseling or an advisor.','This combines a supportive conversation, practical changes, and access to help.'],['Tell them that everyone feels exactly the same, so help is unnecessary.','Normalizing stress should not dismiss a person’s difficulty functioning.']],1,
+ 'Respond to changes in functioning with support and practical adjustments.', 'Practice an opening line that sounds caring without diagnosing.', '9–11, 16'),
+mission('A 20-second reset',
+ 'Mindfulness means paying attention on purpose, in the present moment, without judgment. It can be a brief pause during daily life. The aim is to notice experience, not force the mind to become blank.',
+ 'A team wants a quick mindful pause before starting an assignment. Which instruction fits?',
+ [['Notice your feet on the floor and a few natural breaths; gently return attention when it wanders.','This gives attention a present-moment anchor without judging distraction.'],['Stop having thoughts or you are doing it wrong.','Wandering thoughts do not mean failure; noticing and returning is part of practice.'],['Rate every sensation as good or bad.','Mindfulness emphasizes noticing without immediately judging.']],0,
+ 'A short pause can create space to notice what is happening before choosing a response.', 'Invite an optional 20-second pause with eyes open; observing quietly is also participation.', '11'),
+mission('Control your next move',
+ 'Stress management includes recognizing limits, focusing on what you can influence, and communicating with people who can help. You cannot control every outcome, but you can adjust a plan or request support.',
+ 'An exam date cannot change. A student also has two club events and several assignments that week. Which plan is most useful?',
+ [['Keep every commitment and cut all recovery time.','That leaves little room to manage competing demands.'],['Spend the evening trying to make the exam date change.','This focuses effort on a condition the scenario says cannot change.'],['Prioritize study blocks, reduce an optional commitment, and discuss workload questions early.','This directs effort toward choices and support within the student’s influence.']],2,
+ 'Separate the fixed situation from the choices you still have.', 'Name one fixed condition and one changeable action in this scenario.', '11'),
+mission('When the worry sticks around',
+ 'Stress often relates to an external trigger. Anxiety can involve persistent, excessive worry even when a stressor is absent. Their symptoms can overlap, so a classroom discussion cannot diagnose the cause.',
+ 'The exam is over, but a student says intense worry is still disrupting daily life. What is the best response?',
+ [['“If the exam is over, the worry cannot be real.”','Worry can persist beyond a particular stressor.'],['Listen, take the impact seriously, and encourage a conversation with a qualified support professional.','Support does not require deciding whether the experience is stress, anxiety, or something else.'],['Diagnose them from a checklist during class.','Diagnosis is not a classroom or peer responsibility.']],1,
+ 'You can help someone seek support without naming a diagnosis.', 'Where could a student begin a support conversation on campus?', '12, 16, 33')
+]},
+{title:'Rest, fuel & move',short:'DAILY HABITS',clues:[
+mission('Sleep is doing work',
+ 'Sleep supports physical recovery, memory processing, hormone regulation, and emotional processing. It is part of learning and health, rather than merely time away from studying.',
+ 'A student plans to cut sleep all week to gain study hours. What important tradeoff are they missing?',
+ [['Less sleep automatically creates better learning.','More time awake does not guarantee better memory or functioning.'],['Sleep only affects muscles, so it does not matter for studying.','Sleep also supports brain function and emotional processing.'],['They may gain awake time while giving up processes that support memory and recovery.','Sleep contributes to the very functions the student needs to study and learn.']],2,
+ 'Build rest into a study plan rather than treating it as leftover time.', 'What could be shortened or moved in a hypothetical study schedule to protect rest?', '13'),
+mission('Build a landing strip',
+ 'A consistent bedtime and a dark, quiet, cool environment can support sleep. A wind-down routine can include dimming lights, putting devices away, reading, gentle stretching, or writing tomorrow’s tasks down.',
+ 'A student scrolls in a bright room until bed, then lies awake thinking about unfinished work. Which redesign best uses these ideas?',
+ [['Dim the room, put the phone aside, and write tomorrow’s tasks before a quiet routine.','This addresses stimulation, environment, and worries about unfinished tasks.'],['Keep working in bed until sleep happens.','That continues the stimulating activity instead of creating a transition to rest.'],['Change everything every night so bedtime is unpredictable.','A consistent routine is a more useful cue for winding down.']],0,
+ 'Make the transition to sleep intentional and repeatable.', 'Build a three-step wind-down routine that does not require buying anything.', '14–15'),
+mission('Fuel without the food rules',
+ 'Nutrition supplies energy and building materials. Carbohydrates, protein, and fats are macronutrients; vitamins and minerals are micronutrients. A balanced variety of foods supports different needs—strict restriction is not the goal.',
+ 'A social-media post says a student should cut out an entire macronutrient group to “eat perfectly.” Which response fits a balanced approach?',
+ [['Follow the post because all food rules work for everyone.','Individual needs differ, and a broad restriction is not automatically helpful.'],['Choose variety and seek a registered dietitian for individual nutrition or allergy questions.','This supports balanced eating and qualified advice rather than a universal restriction.'],['Ignore nutrition because only exercise matters.','Food provides nutrients and energy that movement alone cannot supply.']],1,
+ 'Aim for variety; use qualified nutrition support for individual concerns.', 'Name a practical barrier to balanced meals and a support that could help.', '26–27'),
+mission('Use the talk test',
+ 'Physical activity includes movement for transportation, recreation, work, and daily tasks. During moderate aerobic activity, talking is possible but singing is difficult. During vigorous activity, only a few words may be possible before a breath.',
+ 'Sam walks briskly to class and can talk but cannot comfortably sing. Which description fits?',
+ [['It cannot count because it happens outside a gym.','Transportation and daily movement can count as physical activity.'],['It must be vigorous because any walking is vigorous.','Intensity depends on the effort and breathing response, not just the activity’s name.'],['It is an example of moderate activity, and the trip can be part of an active day.','The talk test and the everyday movement both fit the concept.']],2,
+ 'Movement can fit into ordinary routines; a gym membership is not required.', 'Suggest an accessible way a student could add movement they enjoy to a normal day.', '28–29'),
+mission('Strength has more than one setting',
+ 'Muscle-strengthening activities include weights, resistance bands, bodyweight movements, and some physical tasks. One complete movement is a repetition; a group of repetitions is a set. A balanced plan works different major muscle groups.',
+ 'A student dislikes weight rooms. Which plan still includes strengthening?',
+ [['Use suitable resistance-band or bodyweight movements that work several major muscle groups.','Strengthening is defined by muscles working against resistance, not by the room or equipment.'],['Assume strengthening requires a barbell and cannot be adapted.','The material includes multiple ways to strengthen muscles.'],['Only train one favorite movement and ignore the rest of the body.','A balanced approach includes different major muscle groups.']],0,
+ 'Choose forms of movement that fit ability, access, and preference.', 'Explain “repetition” and “set” using one familiar movement.', '28–30')
+]},
+{title:'Consent & connection',short:'RELATIONSHIPS',clues:[
+mission('More than the absence of “no”',
+ 'Consent is an enthusiastic, ongoing mutual agreement to sexual activity. Silence, pressure, or reluctant agreement does not establish enthusiastic consent. The person initiating activity is responsible for ensuring consent is received and maintained.',
+ 'One person asks about sexual activity. The other goes quiet and says, “Okay, fine.” What should happen next?',
+ [['Continue because no one said the word “no.”','The absence of “no” is not the same as enthusiastic agreement.'],['Stop the activity and remove the pressure; there is no clear enthusiastic agreement.','Reluctance or silence is a reason to stop, not to infer permission.'],['Keep asking until the answer sounds more positive.','Repeated pressure does not create freely given agreement.']],1,
+ 'Look for freely given, clear agreement—not a lack of resistance.', 'Give a respectful sentence that stops the activity without demanding an explanation.', '18'),
+mission('A yes can change',
+ 'Consent is an ongoing process. A person can change their mind at any point. Agreement earlier, or to one activity, does not remove the need to listen and check in now.',
+ 'Two people agreed to sexual activity earlier. One now says, “I want to stop.” What is the appropriate response?',
+ [['Remind them they already promised.','An earlier agreement does not override a present decision to stop.'],['Negotiate for a few more minutes before stopping.','Stopping is not conditional on compromise or explanation.'],['Stop immediately and respect the change of mind.','Consent can be withdrawn at any time.']],2,
+ 'Consent belongs to the current moment and the current activity.', 'Offer an example of a simple check-in that leaves room for an honest “no.”', '18'),
+mission('Say the boundary',
+ 'Boundaries are limits and expectations we set for ourselves and others. Clear “I” statements can describe a feeling, a limit, and a request. Respecting a boundary does not require agreeing with the reason for it.',
+ 'A partner expects immediate replies to late-night messages. Which message clearly communicates a boundary?',
+ [['“I need sleep. I put my phone away at 11 and will reply the next day.”','This states a need and a clear, realistic limit.'],['Say nothing, then expect the other person to know the limit.','An unspoken expectation is harder to understand and follow.'],['“If you cared, you would never message anyone at night.”','This turns a personal limit into a demand about someone else’s whole behavior.']],0,
+ 'A useful boundary is specific enough to understand and consistent enough to follow.', 'Rewrite “You are always too demanding” as a clear “I” statement.', '18'),
+mission('Trust does not require surveillance',
+ 'Healthy relationships include respect, honesty, trust, privacy, and the ability to spend time together or apart. Pressure to surrender privacy or stop seeing other people is a concerning behavior, not proof of care.',
+ 'Someone demands their partner’s passwords and says they must stop seeing friends to prove loyalty. What is the strongest interpretation?',
+ [['That is a normal requirement for trust.','Trust does not require giving up privacy and other relationships.'],['These are concerning control behaviors; the partner deserves privacy and support.','The behavior undermines autonomy and connection with others.'],['The partner should prove loyalty by becoming isolated.','Isolation removes support and does not build mutual respect.']],1,
+ 'Care and control are different. Look at the behavior and its effect on autonomy.', 'Describe a supportive response to a friend who tells you about this situation.', '19'),
+mission('Sexual health is bigger than prevention',
+ 'Sexual health includes physical, emotional, mental, and social well-being related to sexuality. Respect, communication, pleasure, identity, safety, and freedom from coercion matter, as well as pregnancy and STI prevention.',
+ 'A campus campaign discusses contraception but ignores boundaries, identity, and respectful relationships. What should the team add?',
+ [['Nothing: sexual health is only about avoiding disease.','Sexual health includes more than the absence of disease.'],['Only a test of students’ personal sexual experiences.','Personal disclosures are not needed to learn these concepts.'],['Consent, inclusive communication, boundaries, and access to nonjudgmental care.','This expands the campaign to the broader meaning of sexual well-being.']],2,
+ 'Sexual well-being combines informed choices, respect, and access to care.', 'Write one inclusive campaign message that does not assume anyone is sexually active.', '17–19')
+]},
+{title:'Sexual health choices',short:'SEXUAL HEALTH',clues:[
+mission('Different tools, different needs',
+ 'Contraception has several forms: external or internal condoms are barrier methods; pills, patches, and rings use hormones; an implant is a hormonal rod placed under the skin, and an injection is a hormonal shot. IUDs sit in the uterus and can be hormonal or copper. Sterilization is intended to be permanent. Schedules and suitability depend on the specific method.',
+ 'Someone has trouble remembering a daily pill and wants to explore alternatives. What is the best next step?',
+ [['Compare preferences and options with a qualified provider, including methods that do not require a daily action.','Method choice should fit the person’s needs and informed preferences.'],['Use someone else’s prescription to try an alternative.','A different method should be selected with appropriate individual guidance.'],['Assume all methods have the same schedule and effects.','Methods differ in use, hormones, reversibility, and other features.']],0,
+ 'Know the families of methods; get product-specific guidance instead of memorizing one schedule for all.', 'Name two questions someone could ask when comparing methods—for example access, hormones, or daily effort.', '20–21',[CDC]),
+mission('Two prevention goals',
+ 'Sexually transmitted infections (STIs) can spread through sexual contact and may have no symptoms. Pregnancy prevention and STI prevention are different goals. Most contraceptive methods do not protect against STIs. Condoms can reduce STI risk and may be used with another contraceptive method for pregnancy prevention.',
+ 'A person uses an IUD and says, “That means I am also protected from STIs.” Which response is accurate?',
+ [['An IUD prevents every type of infection.','An IUD is a pregnancy-prevention method, not STI protection.'],['Contraception and STI prevention are separate; discuss condoms and appropriate testing with a provider.','This addresses both goals instead of assuming one method covers both.'],['No one using contraception ever needs a sexual-health conversation.','A contraceptive method does not replace communication or individual care.']],1,
+ 'Ask two separate questions: how are pregnancy risks and STI risks being addressed?', 'Practice a neutral conversation starter about protection or STI testing.', '20–24',[['CDC: STI basics','https://www.cdc.gov/sti/about/index.html'],CDC,RIH]),
+mission('A tracker is not a guarantee',
+ 'Fertility awareness requires understanding the cycle and consistently using a defined method. Cycle variation can complicate predictions, and sperm can survive for days inside the reproductive tract. A period-tracking app alone is not a guarantee against pregnancy, and fertility-awareness methods do not protect against STIs. Consider what an app stores and shares.',
+ 'An app labels a day “low chance,” and a friend says pregnancy is impossible because menstruation has just started. What is the strongest reply?',
+ [['All cycle apps make every prediction perfectly.','Predictions are not guarantees, and apps are not all designed or validated for contraception.'],['Menstruation makes pregnancy impossible in every case.','Cycle timing varies; menstruation should not be treated as a guarantee against pregnancy.'],['Do not treat the label or bleeding as a guarantee; seek reliable method information and consider privacy.','This recognizes prediction limits, contraceptive needs, and sensitive data.']],2,
+ 'Understand the method and its limits; do not outsource a health decision to an app label.', 'What would you want to know before entering reproductive-health data into an app?', '22',[['NHS: the menstrual cycle and fertility','https://www.nhs.uk/conditions/periods/fertility-in-the-menstrual-cycle/'],CDC,['NHS: fertility awareness','https://www.nhs.uk/contraception/methods-of-contraception/natural-family-planning/']]),
+mission('When a condom breaks',
+ 'Emergency contraception can reduce pregnancy risk after sex without contraception or when a method fails. Options are time-sensitive and should be explored promptly. Emergency contraception does not prevent STIs, so pregnancy prevention and STI care may need separate attention.',
+ 'A condom broke and a student is worried about pregnancy and STIs. Which plan addresses both concerns?',
+ [['Promptly contact a pharmacist or clinician about emergency contraception and ask a clinician about STI testing or other care.','This treats pregnancy prevention as time-sensitive and separately addresses possible STI exposure.'],['Wait until the next routine visit before asking about any options.','Waiting can reduce available emergency-contraception options.'],['Assume emergency contraception also treats every STI.','Emergency contraception does not prevent or treat STIs.']],0,
+ 'Act promptly after contraceptive failure; ask separately about STI care.', 'What would you say to help a friend seek care without judgment or promises about cost?', '23',[['CDC: emergency contraception','https://www.cdc.gov/contraception/hcp/usspr/emergency-contraception.html'],RIH]),
+mission('Get information without the awkward guessing',
+ 'Sexual-health care can include contraception, STI screening, and questions about symptoms or prevention. RIH lists contraceptive care and STI screening. Bedsider explains contraception, Own the Awk supports conversations, and Guttmacher focuses on research and policy. Ask a service directly about privacy, access, and costs.',
+ 'A student wants birth-control information, help starting a testing conversation, and a clinical appointment. Which combination fits those needs?',
+ [['A friend’s prescription, a rumor, and no appointment.','Peer support can help, but rumors and shared prescriptions do not replace reliable information or care.'],['Bedsider for method information; Own the Awk for conversation tools; RIH or another qualified provider for care.','Each resource has a different role: information, communication, and clinical services.'],['Use policy research as a substitute for individual medical care.','Research can inform a topic, but it does not provide an individual clinical assessment.']],1,
+ 'Match the resource to the need: learn, communicate, or receive care.', 'Compose one question about appointment privacy or cost that someone could ask before booking.', '23–24',[RIH,['Bedsider','https://www.bedsider.org/'],['Own the Awk','https://owntheawk.org/']])
+]},
+{title:'Build your support',short:'CAMPUS TOOLKIT',clues:[
+mission('Help before a crisis',
+ 'Support is not reserved for emergencies. Retriever Integrated Health (RIH) brings medical and counseling support together. An advisor or professor can help with academic planning, while a counseling professional can help with emotional concerns.',
+ 'A student wants help with persistent stress and an unmanageable course load. Which plan uses the right kinds of support?',
+ [['Wait until every part of life has fallen apart.','Early support can help before problems become more difficult to manage.'],['Ask a classmate to handle all medical and academic decisions.','Friends can support someone without replacing qualified or role-specific help.'],['Explore counseling through RIH and talk with an academic advisor or professor about workload.','This matches emotional support and academic planning to the appropriate resources.']],2,
+ 'You do not have to solve everything alone or wait for a crisis.', 'Give one example of a request for help that an advisor could act on.', '11, 16, 33', [['RIH','https://health.umbc.edu/']]),
+mission('A place to pause',
+ 'The Office of Health Promotion (OHP) offers well-being resources. The Mind Spa is a space for relaxation, mindfulness, and self-care. A relaxation resource can complement support; it does not have to solve every source of stress.',
+ 'Someone wants a short reset between classes, without treating it as a substitute for ongoing care. Which option fits?',
+ [['Explore the OHP Mind Spa or a brief mindfulness practice.','This fits a short restorative break while leaving room for other support if needed.'],['Expect a massage chair to fix every financial or relationship problem.','A break can help without resolving the underlying conditions.'],['Assume self-care only counts if it costs money.','Useful pauses and mindfulness practices do not have to involve a purchase.']],0,
+ 'Choose a resource for what it can offer; combine supports when needs differ.', 'Design a two-minute reset a student could do if the Mind Spa is unavailable.', '11, 16',[['UMBC Mind Spa','https://healthpromotion.umbc.edu/resources/mind-spa/']]),
+mission('Find the nutrition expert',
+ 'A registered dietitian can help with nutrition questions and food allergy or intolerance concerns. Individual needs may not match a social-media trend or a friend’s eating plan. UMBC’s dining resources list a campus dietitian.',
+ 'A student has food allergy concerns and wants help navigating campus dining. Who is the best starting resource among these?',
+ [['An influencer who has never assessed the student’s needs.','A general post does not address individual allergy concerns or campus options.'],['The campus registered dietitian, with medical care as needed for health concerns.','This connects the student to qualified nutrition support and campus dining knowledge.'],['A teammate who says every allergy can be ignored.','Dismissing an allergy concern is not a safe way to plan meals.']],1,
+ 'Use qualified, individual support when food needs are specific.', 'What information could a student bring to make that first conversation useful?', '27',[['UMBC nutrition resources','https://recreation.umbc.edu/fitness-wellness/additional-resources-2/']]),
+mission('Money stress needs a pathway',
+ 'Financial well-being can affect concentration and stress. The course resources include Finance Smarts, CashCourse self-paced learning, FINC150, and Financial Aid counseling and scholarship information. Learning money skills and resolving an immediate funding issue are related but different needs.',
+ 'A student has a financial-aid question now and also wants to build budgeting skills. Which pair fits?',
+ [['Use a budgeting module as a substitute for resolving the aid question.','Education can help, but it cannot directly resolve an individual aid record.'],['Ignore the funding question and add more commitments.','That leaves the immediate issue unresolved.'],['Contact Financial Aid about the immediate question and explore financial-literacy learning for skills.','This separates a case-specific funding issue from ongoing financial education.']],2,
+ 'Match immediate needs to a person who can act, and learning needs to a learning resource.', 'Write one specific question a student could bring to a financial-aid counselor.', '16'),
+mission('Build a realistic support map',
+ 'Different supports can work together: RAC offers activity options; RIH offers care and counseling; OHP offers health-promotion resources; advisors help with academics. Alcohol can affect judgment and communication, and substances can interfere with functioning. A supportive plan responds to needs without shame.',
+ 'A fictional student feels isolated, uses alcohol to unwind, and is falling behind. Which plan is the most useful starting point?',
+ [['Listen without judgment, offer RIH support, discuss academic help, and explore an enjoyable alcohol-free connection or activity.','This addresses several needs while supporting the student’s choice and access to help.'],['Tell them one gym visit will solve everything.','A single activity is not a substitute for addressing the broader concerns.'],['Publicly confront them and demand personal details.','Shame and unwanted disclosure can make seeking support harder.']],0,
+ 'Build a small, realistic support map instead of prescribing one universal fix.', 'As a team, name two resources and one manageable first step for this fictional student.', '5, 16, 28, 31–33', [['RIH','https://health.umbc.edu/']])
+]}
+];
+// Optional hands-on method explorer inside the first sexual-health mission.
+QUIZ[4].clues[0].cards = [
+ ['Condoms','External and internal condoms create a barrier to sperm. Condoms can also reduce STI risk. Pregnancy prevention and STI prevention are separate goals.'],
+ ['The pill','Oral contraception is taken on a regular daily schedule. Formulations differ; ask about the specific product and what to do if a dose is missed.'],
+ ['Patch & ring','These methods release hormones through a skin patch or a ring placed in the vagina. Replacement and break schedules depend on the product.'],
+ ['Implant','A provider places a small hormonal rod under the skin of the upper arm. It does not require a daily pill; ask about suitability, duration, and removal.'],
+ ['Injection','A hormonal shot is repeated on a schedule. Ask a provider about timing, follow-up, and whether clinic or self-administration applies to the product.'],
+ ['IUD','A provider places an intrauterine device in the uterus. Hormonal and copper versions differ. Ask about the specific device, duration, and removal.'],
+ ['Sterilization','Vasectomy and tubal procedures are intended as permanent contraception. They differ from reversible methods and require informed consideration.']
+];
+</script><script>(() => {
+'use strict';
+const $ = id => document.getElementById(id);
+const KEY = 'univ101-campus-choices-v2';
+const colors = ['#81d6c3','#ffd16b','#b9adff','#ffad92','#8ec9ff','#f4a4ce'];
+let game = null, interval = null, remaining = 0, setupReturn = false;
+function valid(s) {
+ const isKey = k => typeof k === 'string' && /^[0-5]-[0-4]$/.test(k);
+ if (!s || s.version!==2 || !Array.isArray(s.teams) || s.teams.length<2 || s.teams.length>6 || !s.teams.every(t=>t && typeof t.name==='string' && Number.isFinite(t.score))) return false;
+ const scores = a => Array.isArray(a) && a.length===s.teams.length && a.every(Number.isFinite);
+ const teamIndex = i => Number.isInteger(i) && i>=0 && i<s.teams.length;
+ if (!Array.isArray(s.played) || !s.played.every(isKey) || new Set(s.played).size!==s.played.length || !Array.isArray(s.history) || !s.history.every(h=>h && isKey(h.key) && scores(h.before)) || ![0,15,30,60].includes(s.timer) || typeof s.penalties!=='boolean') return false;
+ const a=s.active;
+ return a===null || !!(a && isKey(a.key) && !s.played.includes(a.key) && scores(a.before) && typeof a.revealed==='boolean' && typeof a.started==='boolean' && (a.choice===null || (Number.isInteger(a.choice) && a.choice>=0 && a.choice<3)) && Array.isArray(a.wrong) && a.wrong.every(teamIndex) && (a.winner===null || teamIndex(a.winner)));
+}
+function save() {
+ try { localStorage.setItem(KEY,JSON.stringify(game)); $('saveStatus').textContent='Progress saved on this browser'; }
+ catch { $('saveStatus').textContent='Browser storage unavailable • keep this tab open'; }
+}
+function render() {
+ $('teams').style.setProperty('--team-count', game.teams.length);
+ $('teams').replaceChildren(...game.teams.map((t,i)=>{
+  const el=document.createElement('div'); el.className='team';el.style.setProperty('--team-color',colors[i]);
+  const name=document.createElement('span');name.className='team-name';name.textContent=t.name;
+  const score=document.createElement('strong');score.className='score';score.textContent=t.score.toLocaleString();el.append(name,score);return el;
+ }));
+ $('board').replaceChildren(...QUIZ.map((cat,c)=>{
+  const col=document.createElement('div');col.className='category';const title=document.createElement('h3');title.textContent=cat.title;col.append(title);
+  cat.clues.forEach((_,r)=>{const key=`${c}-${r}`,played=game.played.includes(key),btn=document.createElement('button');btn.className='tile';btn.textContent=played?'✓':(r+1)*100;btn.disabled=played;btn.setAttribute('aria-label',`${cat.title}, ${(r+1)*100} points${played?', completed':''}`);btn.onclick=()=>openClue(key);col.append(btn);});return col;
+ }));
+ $('progress').textContent=`${game.played.length} / 30`;$('progressBar').style.width=`${game.played.length/30*100}%`;
+ $('undo').disabled=!game.history.length || !!game.active;
+ const learned=game.history.filter(h=>h.learned);
+ $('toolkitCount').textContent=`${learned.length} idea${learned.length===1?'':'s'} collected`;
+ $('toolkitCards').replaceChildren(...learned.map(h=>{const [c,r]=h.key.split('-').map(Number),m=QUIZ[c].clues[r];const item=document.createElement('article'),title=document.createElement('h3'),note=document.createElement('p');title.textContent=m.title;note.textContent=m.takeaway;item.append(title,note);return item;}));
+ $('results').hidden=game.played.length!==30;
+ if(game.played.length===30){const max=Math.max(...game.teams.map(t=>t.score)),winners=game.teams.filter(t=>t.score===max).map(t=>t.name);$('winner').textContent=winners.length===1?`${winners[0]} wins with ${max.toLocaleString()} points!`:`A tie: ${winners.join(' & ')} • ${max.toLocaleString()} points` ;}
+}
+function names() {
+ const existing=[...$('nameFields').querySelectorAll('input')].map(x=>x.value);
+ $('nameFields').replaceChildren(...Array.from({length:Number($('teamCount').value)},(_,i)=>{const label=document.createElement('label');label.textContent=`Team ${i+1}`;const input=document.createElement('input');input.type='text';input.maxLength=30;input.required=true;input.value=existing[i]||`Team ${i+1}`;input.setAttribute('aria-label',`Name for team ${i+1}`);label.append(input);return label;}));
+}
+function setup() {names();$('cancelSetup').hidden=!game;setupReturn=!!game;$('setup').showModal();}
+$('teamCount').onchange=names;
+$('setupForm').onsubmit=e=>{
+ e.preventDefault();const teams=[...$('nameFields').querySelectorAll('input')].map((x,i)=>({name:x.value.trim()||`Team ${i+1}`,score:0}));
+ game={version:2,teams,timer:Number($('timerSetting').value),penalties:$('penalties').checked,played:[],history:[],active:null};$('setup').close();save();render();
+};
+$('setup').addEventListener('cancel',e=>{if(!setupReturn)e.preventDefault();});
+$('cancelSetup').onclick=()=>$('setup').close();
+function stopTimer(){if(interval!==null)clearInterval(interval);interval=null;}
+function updateTimer(){ $('timerDisplay').textContent=game.timer?`${remaining}s`:''; }
+function openClue(key, restored=false) {
+ stopTimer();
+ if(!restored){game.active={key,before:game.teams.map(t=>t.score),wrong:[],winner:null,revealed:false,started:false,choice:null};save();}
+ const [c,r]=key.split('-').map(Number),clue=QUIZ[c].clues[r];
+ $('clueCategory').textContent=QUIZ[c].title;$('clueValue').textContent=`${(r+1)*100} points`;
+ $('missionTitle').textContent=clue.title;$('lessonText').textContent=clue.lesson;$('clueText').textContent=clue.scenario;
+ $('answerText').textContent=`${String.fromCharCode(65+clue.correct)} · ${clue.options[clue.correct][0]}`;
+ $('teachingNote').textContent=clue.takeaway;$('discussionPrompt').textContent=clue.discussion;
+ $('source').textContent=`Primary source: AY 26–27 UNIV 101 Updates • slides ${clue.slides}. Scenarios and discussion activities adapted for classroom teaching.`;
+ $('referenceLinks').replaceChildren(...clue.links.map(([label,url])=>{const p=document.createElement('p'),link=document.createElement('a');link.textContent=label;link.href=url;link.target='_blank';link.rel='noopener noreferrer';p.append(link);return p;}));
+ $('methodExplorer').hidden=!clue.cards;
+ $('methodCards').replaceChildren(...(clue.cards||[]).map(([title,text])=>{const card=document.createElement('details'),heading=document.createElement('summary'),note=document.createElement('p');heading.textContent=title;note.textContent=text;card.append(heading,note);return card;}));
+ $('clueDialog').querySelector('.references').open=false;
+ remaining=game.timer;$('timerMessage').textContent='';updateTimer();$('timerButton').textContent='Start timer';
+ showAnswerState();$('clueDialog').showModal();
+}
+function currentMission(){const [c,r]=game.active.key.split('-').map(Number);return QUIZ[c].clues[r];}
+function showAnswerState(){
+ const a=game.active,clue=currentMission();
+ $('learnPanel').hidden=a.started;$('challengePanel').hidden=!a.started||a.revealed;
+ $('answerPanel').hidden=!a.revealed;$('timerButton').hidden=!game.timer||a.revealed;
+ $('timerDisplay').hidden=!game.timer;
+ $('back').hidden=a.wrong.length>0||a.winner!==null;
+ $('finish').textContent=a.revealed?'Finish mission →':'Skip mission →';
+ ['stepLearn','stepDecide','stepDiscuss'].forEach((id,i)=>{const stage=a.revealed?2:a.started?1:0;$(id).classList.toggle('current',i===stage);if(i===stage)$(id).setAttribute('aria-current','step');else $(id).removeAttribute('aria-current');});
+ $('choices').replaceChildren(...clue.options.map(([text],i)=>{
+  const btn=document.createElement('button');btn.className='choice';btn.textContent=`${String.fromCharCode(65+i)} · ${text}`;
+  btn.setAttribute('aria-pressed',String(a.choice===i));btn.onclick=()=>{a.choice=i;save();showAnswerState();$('choices').children[i].focus();};return btn;
+ }));
+ $('choiceResult').textContent=a.choice===null?'Compare the reasoning behind all three choices.':a.choice===clue.correct?'Your marked choice fits. Explain the reasoning in your own words.':'Your marked choice opens a useful discussion. Compare it with the best next move below.';
+ $('feedback').replaceChildren(...clue.options.map(([text,explanation],i)=>{
+  const item=document.createElement('div');item.className='feedback-item';if(i===clue.correct)item.classList.add('best');
+  const title=document.createElement('strong');title.textContent=`${String.fromCharCode(65+i)} · ${text}`;
+  const note=document.createElement('p');note.textContent=explanation;item.append(title,note);return item;
+ }));
+ renderJudging();
+}
+$('startChallenge').onclick=()=>{game.active.started=true;save();showAnswerState();$('choices').children[0].focus();};
+
+function renderJudging(){
+ const a=game.active,value=(Number(a.key.split('-')[1])+1)*100;
+ $('judging').replaceChildren(...game.teams.map((t,i)=>{
+  const row=document.createElement('div');row.className='judge-row';const name=document.createElement('span');name.textContent=t.name;
+  const buttons=document.createElement('div');const right=document.createElement('button'),wrong=document.createElement('button');
+  right.textContent=a.winner===i?'✓ Awarded':`Correct +${value}`;wrong.textContent=a.wrong.includes(i)?'Incorrect recorded':game.penalties?`Incorrect −${value}`:'Incorrect (no loss)';
+  right.disabled=a.winner!==null||a.wrong.includes(i);wrong.disabled=right.disabled;
+  right.onclick=()=>judge(i,true);wrong.onclick=()=>judge(i,false);buttons.append(right,wrong);row.append(name,buttons);return row;
+ }));
+}
+function judge(i,correct){
+ const a=game.active;if(!a.revealed||a.winner!==null||a.wrong.includes(i))return;
+ const value=(Number(a.key.split('-')[1])+1)*100;
+ if(correct){game.teams[i].score+=value;a.winner=i;}else{a.wrong.push(i);if(game.penalties)game.teams[i].score-=value;}
+ save();render();showAnswerState();
+}
+$('timerButton').onclick=()=>{
+ if(!game.active.started||game.active.revealed)return;
+ if(interval!==null){stopTimer();$('timerButton').textContent='Resume timer';return;}
+ if(remaining===0)remaining=game.timer;
+ const end=Date.now()+remaining*1000;$('timerMessage').textContent='';$('timerButton').textContent='Pause timer';
+ interval=setInterval(()=>{remaining=Math.max(0,Math.ceil((end-Date.now())/1000));updateTimer();if(remaining===0){stopTimer();$('timerButton').textContent='Restart timer';$('timerMessage').textContent='Time’s up • host decides when to reveal';}},150);
+};
+function reveal(){if(!game?.active||!game.active.started||game.active.revealed)return;stopTimer();game.active.revealed=true;$('timerButton').hidden=true;save();showAnswerState();$('answerText').tabIndex=-1;$('answerText').focus();}
+$('reveal').onclick=reveal;
+function finish(){const a=game.active;stopTimer();game.history.push({key:a.key,before:a.before,learned:a.revealed});game.played.push(a.key);game.active=null;$('clueDialog').close();save();render();focusTile(a.key);}
+function focusTile(key){const [c,r]=key.split('-').map(Number);const column=$('board').children[c];const tile=column?.children[r+1];if(tile&&!tile.disabled)tile.focus();else $('undo').focus();}
+function back(){const a=game.active;if(!a)return;if(a.wrong.length||a.winner!==null){finish();return;}stopTimer();game.active=null;$('clueDialog').close();save();render();focusTile(a.key);}
+$('finish').onclick=finish;$('back').onclick=back;
+$('clueDialog').addEventListener('cancel',e=>{e.preventDefault();if(game.active.wrong.length||game.active.winner!==null){$('finish').focus();return;}back();});
+$('undo').onclick=()=>{if(game.active||!game.history.length)return;const h=game.history.pop();game.played=game.played.filter(k=>k!==h.key);game.teams.forEach((t,i)=>t.score=h.before[i]);save();render();focusTile(h.key);};
+$('help').onclick=()=>$('helpDialog').showModal();$('closeHelp').onclick=()=>$('helpDialog').close();
+$('newGame').onclick=()=>$('resetDialog').showModal();$('cancelReset').onclick=()=>$('resetDialog').close();$('confirmReset').onclick=()=>{$('resetDialog').close();setup();};
+$('fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await document.documentElement.requestFullscreen();}catch{$('fullscreen').textContent='Use browser full screen';}};
+
+try{const stored=JSON.parse(localStorage.getItem(KEY));if(valid(stored))game=stored;}catch{}
+if(game){render();save();if(game.active)openClue(game.active.key,true);}else{game={version:2,teams:[{name:'Team 1',score:0},{name:'Team 2',score:0},{name:'Team 3',score:0}],timer:0,penalties:false,played:[],history:[],active:null};render();game=null;setup();}
+})();
+</script>
+</body></html>
