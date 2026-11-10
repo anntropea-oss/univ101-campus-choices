@@ -52,7 +52,7 @@ Edit **questions.js**. Each mission has a title, a teaching paragraph, a scenari
 
 The separate **index.html**, **styles.css**, **questions.js**, and **app.js** source version also works offline when kept together. The game has no external scripts, fonts, trackers, or automatic network requests.
 
-Development checks: install jsdom in a development-only location and run `NODE_PATH=/path/to/node_modules node tests/game.test.cjs`. Real-browser visual QA remains unverified because the in-app browser blocked local-file preview.
+Development checks: install jsdom in a development-only location and run `NODE_PATH=/path/to/node_modules node tests/game.test.cjs`. The public GitHub Pages site was checked in a real browser: setup, the board, and a sexual-health mission’s Learn/Decide/Discuss flow loaded and worked. Local file preview was previously blocked by the in-app browser; the offline build also passed DOM checks.
 
 ## Hosting
 
